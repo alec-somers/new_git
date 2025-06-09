@@ -2,8 +2,11 @@
 //   alert("You clicked on the page!");
 // });
 
-var button = document.querySelector("button");
+var clickCount = 0;
 
-button.addEventListener("click", function () {
-  alert("Someone clicked the button!");
-});
+var logText = function (event) {
+  console.log(event.target.textContent);
+  clickCount++;
+};
+
+window.addEventListener("click", logText);
